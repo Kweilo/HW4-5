@@ -21,24 +21,21 @@ public class Main {
             if (clientDeviceYear <= 2015) {
                 System.out.println("Установите облегченную версию");
             }
-        } else if (clientOS == 0) {
+        } else {
             System.out.println("Установите версию приложения для iOS по ссылке");
             if (clientDeviceYear <= 2015) {
                 System.out.println("Установите облегченную версию");
             }
         }
-
         //Задача 3
         int years = 2024;
-        if (years > 1584) {
-            if ((years % 400 == 0) || (years % 4 == 0 && years % 100 != 0)) {
-                System.out.println(years + " год является високосным");
-            } else {
-                System.out.println(years + " год не является високосным");
-            }
-        } else {
+        if (years < 1584) {
             System.out.println("Год не может быть меньше 1585");
-        }
+        } else if ((years % 400 == 0) || (years % 4 == 0 && years % 100 != 0)) {
+            System.out.println(years + " год является високосным");
+        } else {
+            System.out.println(years + " год не является високосным");
+            }
 
         //Задача 4
         int deliveryDistance = 95;
